@@ -7,6 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>API Reference</title>
 
+  <!-- Primary Meta Tags -->
+<title>Digital Banking System</title>
+<meta name="title" content="WoodCore is a lightweight cloud banking platform that enables fintech, digital banks.">
+<meta name="description" content="WoodCore is a lightweight cloud banking platform that enables fintech, digital banks, and payment service providers to create their own products requiring banking capabilities, or to integrate such capabilities into their systems, apps. and workflows.">
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://metatags.io/">
+<meta property="twitter:title" content="WoodCore is a lightweight cloud banking platform that enables fintech, digital banks.">
+<meta property="twitter:description" content="WoodCore is a lightweight cloud banking platform that enables fintech, digital banks, and payment service providers to create their own products requiring banking capabilities, or to integrate such capabilities into their systems, apps. and workflows.">
+
+
   <style>
     .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -199,6 +210,16 @@
   <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
   <link href="stylesheets/print.css" rel="stylesheet" media="print" />
   <script src="javascripts/all_nosearch.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176428267-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176428267-1');
+</script>
+
 </head>
 
 <body class="index" data-languages="[]">
@@ -460,24 +481,22 @@
     <div class="content">
       <aside class="notice">
 <strong>Documentation in progress</strong><br>
-Hey Devs! - This documentation is in progress. <bold>We have over 600 open API's</bold> and most of which are yet to be added. Please reach out to us if you encounter any issues at <a href="mailto:tech@woodcoreapp.com">tech@woodcoreapp.com</a>
+Hey Devs! - This documentation is in progress. <bold>We have over 600 open APIs</bold> and most of which are yet to be added. Please reach out to us if you encounter any issues at <a href="mailto:tech@woodcoreapp.com">tech@woodcoreapp.com</a>
 </aside>
 <h1 id='introduction'>Introduction</h1>
-<p>WoodCore is an cloud Banking and Compliance platform that enables Customers to create their own products requiring banking capabilities, or to integrate such capabilities into their systems, apps. and workflows.</p>
+<p>WoodCore is a lightweight cloud banking platform that enables fintech, digital banks, and payment service providers to create their own products requiring banking capabilities, or to integrate such capabilities into their systems, apps. and workflows.</p>
 
-<p>Customers connect to the platform via the Customer API and access financial products through what we call Product Rails - a full list of the capabilities available via the WoodCore Product can be seen below or on our .</p>
+<p>Customers connect to the platform via the Customer API and access financial products - a full list of the capabilities available via the WoodCore application can be seen below or on ours.</p>
 
 <p>The platform is driven by a simple API, built to be rapidly integrated into your business. WoodCore is all about simplifying your life by allowing you to integrate a complete set of financial services capabilities into your business, app. or product.</p>
 
-<p>These guides are designed to help anyone and everyone use the API - from CEOs thru to developers. However, if you need more detailed, development-focused information after going through the guides, go to the .</p>
+<p>These guides are designed to help anyone and everyone use the API - from CEOs thru to developers. However, if you need more detailed, development-focused information after going through the guides, give us a quick heads-up on <a href="mailto:tech@woodcoreapp.com">tech@woodcoreapp.com</a></p>
 
 <p>Pick the docs that are right for you. These guides, and API reference docs will get you across the deploy line, straight to HTTP 200 OK.</p>
 <h1 id='authorization'>Authorization</h1>
-<p>Authentication to the API is configured to be supported via HTTP Basic Auth.</p>
+<p>Authentication to the API is configured to be supported via HTTP Auth.</p>
 
-<p>Default authentication is using HTTP Basic Auth. </p>
-
-<p>We provide secret keys. The secret keys however, are to be kept secret. If for any reason you believe your secret key has been compromised or you wish to reset them, you can do so by speaking to our CSM or sending an email to <a href='mailto:tech@woodcoreapp.com'>tech@woodcoreapp.com</a>.</p>
+<p>We provide secret keys. The secret keys however, are to be kept secret. If for any reason you believe your secret key has been compromised or you wish to reset them, you can do so by speaking to a CSM or sending an email to <a href='mailto:tech@woodcoreapp.com'>tech@woodcoreapp.com</a>.</p>
 
 <p><br>
 <strong>Authorization headers</strong></p>
@@ -492,7 +511,7 @@ Hey Devs! - This documentation is in progress. <bold>We have over 600 open API's
 <tr>
 <td>WoodCore-Tenant</td>
 <td>tenant_name</td>
-<td>tenant_name will enable woodCore supply specific resources</td>
+<td>tenant_name will enable woodCore to supply specific resources</td>
 </tr>
 <tr>
 <td>Authentication</td>
@@ -506,9 +525,9 @@ Hey Devs! - This documentation is in progress. <bold>We have over 600 open API's
 </tr>
 </tbody></table>
 <h1 id='api-errors'>API Errors</h1>
-<p>WoodCore API is RESTful and as such, uses conventional HTTP response codes to indicate the success or failure of requests.</p>
-
-<p><strong>We discuss some common errors and their causes below</strong></p>
+<p>WoodCore API is RESTful and as such, uses conventional HTTP response codes to indicate the success or failure of requests.
+<br>
+<strong>Common HTTP response codes</strong></p>
 
 <table><thead>
 <tr>
@@ -544,7 +563,7 @@ Hey Devs! - This documentation is in progress. <bold>We have over 600 open API's
 
 <aside class="notice">
 <strong>Use WoodCore</strong><br>
-You should create a WoodCore account that you can test the API against. We will provide you with test keys that you can use to make API calls
+You should create a WoodCore <a href="https://woodcoreapp.com/contact">account</a> that you can test the API against. We will provide you with test keys that you can use to make API calls in a blink!
 </aside>
 <h1 id='customers'>Customers</h1><h2 id='create-customers'>Create customers</h2>
 <blockquote>
@@ -575,12 +594,12 @@ You should create a WoodCore account that you can test the API against. We will 
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Clients can be created in a Pending state. This API exists to enable client activation (for when a client becomes an approved member of the financial Institution).</p>
+<p>Customers or Clients can be created with a deposit/savings accounts alongside. This API exists to enable client activation (for when a client becomes an approved member of the financial Institution). if the <code>active</code> is set to true, the customer is activiated at the time of creation.</p>
 
 <p>If the client happens to be already active this API will result in an error.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients</code></p>
-<h3 id='arguments'>Arguments</h3>
+<h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -662,12 +681,12 @@ You should create a WoodCore account that you can test the API against. We will 
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Note:You can update any of the basic attributes of a client (but not its associations) using this API.</p>
+<p><strong>Note: </strong> You can update any of the basic attributes of a client (but not its associations) using this API.</p>
 
 <p>Changing the relationship between a client and its office is not supported through this API. An API specific to handling transfers of clients between offices is available for the same.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>PUT https://api.woodcoreapp.com/v1/clients</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -710,7 +729,7 @@ You should create a WoodCore account that you can test the API against. We will 
       </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="mi">1</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"submittedByUsername"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mifos"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"submittedByUsername"</span><span class="p">:</span><span class="w"> </span><span class="s2">"woodcore"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"submittedByFirstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"App"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"submittedByLastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Administrator"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"activatedOnDate"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
@@ -718,7 +737,7 @@ You should create a WoodCore account that you can test the API against. We will 
       </span><span class="mi">1</span><span class="p">,</span><span class="w">
       </span><span class="mi">1</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"activatedByUsername"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mifos"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"activatedByUsername"</span><span class="p">:</span><span class="w"> </span><span class="s2">"woodcore"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"activatedByFirstname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"App"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"activatedByLastname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Administrator"</span><span class="w">
   </span><span class="p">},</span><span class="w">
@@ -727,7 +746,7 @@ You should create a WoodCore account that you can test the API against. We will 
   </span><span class="s2">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<p>Retrive all customers on your account in  woodcore</p>
+<p>Retrive all customers or clients on your woodcore account </p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://api.woodcoreapp.com/v1/clients</code></p>
 <h2 id='activate-a-customer'>Activate a Customer</h2>
@@ -751,10 +770,10 @@ You should create a WoodCore account that you can test the API against. We will 
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>If the client happens to be already active this API will result in an error.</p>
+<p>If the customer or client has been previsously created and kept in pending state, this API will be used to activate the client. However, if it happens to be already active this API will result in an error.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}?command=activate</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
+<h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -805,7 +824,7 @@ You should create a WoodCore account that you can test the API against. We will 
 <p>If the client have any active loans/depositAccount this API will result in an error.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}?command=close</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -854,7 +873,7 @@ You should create a WoodCore account that you can test the API against. We will 
 <p>The selected Staff should belong to the same office (or an officer higher up in the hierarchy) as the Client he manages.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}?command=assignStaff</code></p>
-<h3 id='query-parameters-4'>Query Parameters</h3>
+<h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -891,7 +910,7 @@ You should create a WoodCore account that you can test the API against. We will 
 <p>Allows you to unassign the Staff assigned to a Client.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}?command=unassignStaff</code></p>
-<h3 id='query-parameters-5'>Query Parameters</h3>
+<h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -932,7 +951,7 @@ You should create a WoodCore account that you can test the API against. We will 
 <p>The selected savings account should be one among the existing savings account for a particular customer.</p>
 <h3 id='http-request-8'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}?command=updateSavingsAccount</code></p>
-<h3 id='query-parameters-6'>Query Parameters</h3>
+<h3 id='query-parameters-7'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1010,10 +1029,10 @@ You should create a WoodCore account that you can test the API against. We will 
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>An example of how a loan portfolio summary can be provided. This is requested in a specific use case of the community application.
+<p>An example of how a loan portfolio summary can be provided. This is requested in a specific use case of the woodcore application.
 It is quite reasonable to add resources like this to simplify User Interface development.</p>
 <h3 id='http-request-9'>HTTP Request</h3>
-<p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}/accounts</code></p>
+<p><code>GET https://api.woodcoreapp.com/v1/clients/{clientId}/accounts</code></p>
 <h2 id='upload-customer-image'>Upload Customer Image</h2>
 <blockquote>
 <p>Upload Customer Image  Request</p>
@@ -1037,7 +1056,7 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 <p>Convert image to base64 before sending to the API</p>
 <h3 id='http-request-10'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}/images</code></p>
-<h3 id='query-parameters-7'>Query Parameters</h3>
+<h3 id='query-parameters-8'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1092,10 +1111,10 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>The list capability of clients can support pagination and sorting.</p>
+<p>Retrive a list of both savings and loan transactions of a customer. The list capability of customer can support pagination and sorting.</p>
 <h3 id='http-request-11'>HTTP Request</h3>
-<p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}/transactions?limit=5&amp;offset=0</code></p>
-<h3 id='query-parameters-8'>Query Parameters</h3>
+<p><code>GET https://api.woodcoreapp.com/v1/clients/{clientId}/transactions?limit=5&amp;offset=0</code></p>
+<h3 id='query-parameters-9'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1104,9 +1123,9 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>clientId</td>
+<td><span class="label notice">true</span></td>
+<td>customer/client id</td>
 </tr>
 </tbody></table>
 
@@ -1153,8 +1172,29 @@ It is quite reasonable to add resources like this to simplify User Interface dev
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-12'>HTTP Request</h3>
+</span></code></pre>
+<p>Retrive a single transaction of a customer/client</p>
+<h3 id='http-request-12'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/clients/{clientId}/transaction/{transactionId}</code></p>
+<h3 id='query-parameters-10'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>clientId</td>
+<td><span class="label notice">true</span></td>
+<td>customer/client id</td>
+</tr>
+<tr>
+<td>transactionId</td>
+<td><span class="label notice">true</span></td>
+<td>transaction id</td>
+</tr>
+</tbody></table>
 
 <aside class="notice">
 `clients/189/transactions?offset=10&limit=50`
@@ -1184,7 +1224,7 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>A deposit account can be a savings, curremt, fixed or coporate account. This account can also serve as a digital wallet for angency banking organisations or fintechs</p>
+<p>A deposit account can be a savings, fixed or coporate account depening on the configurations. This account can and has mostly been serving as a digital wallet for angency banking organisations and other fintechs</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
@@ -1203,7 +1243,7 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 <tr>
 <td>productId</td>
 <td><span class="label notice">true</span></td>
-<td>deposit product id must be <a href="#Deposit_Product">created</a></td>
+<td>deposit product id must be <a href="#deposit-product">created</a></td>
 </tr>
 <tr>
 <td>dateFormat</td>
@@ -1212,7 +1252,7 @@ It is quite reasonable to add resources like this to simplify User Interface dev
 </tr>
 <tr>
 <td>accountNo</td>
-<td><span class="label notice">false</span></td>
+<td><span class="label">false</span></td>
 <td>unqiue account number</td>
 </tr>
 <tr>
@@ -1262,7 +1302,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Approves savings application so long as its in &#39;Submitted and pending approval&#39; state.</p>
+<p>After a deposit account has been created, there is a need to approve the application so long as its in &#39;Submitted and pending approval&#39; state.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=approve</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
@@ -1381,7 +1421,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Results in an approved savings application being converted into an &#39;active&#39; savings account.</p>
+<p>After approval of a deposit account, there will be a need to activate which will results in an approved savings application being converted into an &#39;active&#39; savings account.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=activate</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
@@ -1447,11 +1487,11 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Results in an Activated savings application being converted into an &#39;closed&#39; savings account.</p>
-
-<p>closedOnDate is closure date of savings account</p>
+<p>Results in an Activated savings application being converted into an &#39;closed&#39; savings account. The closedOnDate is closure date of savings account</p>
 
 <p>withdrawBalance is a boolean value, true value of this field performs a withdrawal transaction with account&#39;s running balance.</p>
+
+<p><strong>Note: </strong> an account can ONLY be closed if there are not transactions performed on it</p>
 <h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=close</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
@@ -1480,7 +1520,7 @@ Response</p>
 <tr>
 <td>locale</td>
 <td><span class="label notice">true</span></td>
-<td>user language</td>
+<td>language</td>
 </tr>
 </tbody></table>
 <h1 id='lien-manager'>Lien Manager</h1><h2 id='block-savings-account'>Block Savings Account</h2>
@@ -1509,7 +1549,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Blocks Savings account from all types of credit and debit transactions</p>
+<p>Blocks Savings account from all types of credit and debit transactions - Mostly used for regulatory purposes. Post no entry</p>
 <h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=block</code></p>
 <h2 id='unblock-savings-account'>Unblock Savings Account</h2>
@@ -1567,7 +1607,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Savings account will be blocked from all types of credit transactions.</p>
+<p>Savings account will be blocked from all types of credit transactions. Post not credit</p>
 <h3 id='http-request-8'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=blockCredit</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
@@ -1610,7 +1650,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>It unblocks the Saving account&#39;s credit operations. Now all types of credits can be transacted to Savings account</p>
+<p>It unblocks the Saving account&#39;s credit operations. Now all types of credits can be transacted to Savings account.</p>
 <h3 id='http-request-9'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=unblockCredit</code></p>
 <h3 id='query-parameters-7'>Query Parameters</h3>
@@ -1653,7 +1693,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>All types of debit operations from Savings account wil be blocked</p>
+<p>All types of debit operations from Savings account wil be blocked. Post not debit, mostly used for AML compliance auditing process</p>
 <h3 id='http-request-10'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{savingsId}?command=blockDebit</code></p>
 <h3 id='query-parameters-8'>Query Parameters</h3>
@@ -1791,7 +1831,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Retrive all teh savings account on your woodcore account</p>
+<p>Retrive all the savings account beleonging to all the customers on your woodcore account</p>
 <h3 id='http-request-12'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts</code></p>
 <h2 id='retrieve-a-deposit-account'>Retrieve a deposit account</h2>
@@ -1871,7 +1911,9 @@ Response</p>
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-13'>HTTP Request</h3>
+</span></code></pre>
+<p>Retreive specific savings account. Find some parameters below to filter the type of data expected to be retruned. Transactions, charges or all</p>
+<h3 id='http-request-13'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}</code></p>
 <h3 id='query-parameters-10'>Query Parameters</h3>
 <table><thead>
@@ -1946,7 +1988,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of any or all of:</p>
+<p>This is a convenience resource. It can be useful when building maintenance user interface screens for client applications. The template data returned consists of all the transactions in a single savings account(digital wallet).</p>
 <h3 id='http-request-14'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}/transactions/{transactionId}</code></p>
 <h3 id='query-parameters-11'>Query Parameters</h3>
@@ -2005,7 +2047,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Customer deposits from internal or external sources</p>
+<p>Customer deposits from internal or external sources. Think of a process where you make a deposit into a customer account when he pays with his ATM, USSD, or agency network. </p>
 <h3 id='http-request-15'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}/transactions?command=deposit</code></p>
 <h3 id='query-parameters-12'>Query Parameters</h3>
@@ -2109,7 +2151,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Withdrawal transaction can be used for many cases such as NIP payments, bill payment, ATM withdrawal.</p>
+<p>Withdrawal transaction can be used for many cases such as NIP payments, POS, bill payment, ATM withdrawal, etc</p>
 <h3 id='http-request-16'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}/transactions?command=withdrawal</code></p>
 <h3 id='query-parameters-13'>Query Parameters</h3>
@@ -2291,7 +2333,7 @@ Response</p>
 
 
 </span></code></pre>
-<p>Undo or reverse a transaction for many reasons, maybe switch inoaprative froma card provider or network failure from a thirdparty provider. This endpoint is used to reverse any money that was previously debited or credit into a deposit account</p>
+<p>Undo or reverse a transaction for many reasons, maybe switch inoaprative from a card provider or network failure from a thirdparty provider. This endpoint is used to reverse any money that was previously debited or credit into a deposit/savings account</p>
 <h3 id='http-request-18'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}/transactions{transactionId}?command=undo</code></p>
 <h3 id='query-parameters-15'>Query Parameters</h3>
@@ -2336,7 +2378,7 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre>
-<p>Hold amount enables the user to hold/block/lien the specified amount from the account</p>
+<p>Hold amount enables the user to hold/block/lien the specified amount from the account. This is mostly used for ISO 8583 financial messages where a certain amount of money needs to be freezed an inaccessable by the customer.</p>
 <h3 id='http-request-19'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsaccounts/{accountId}/transactions?command=holdAmount</code></p>
 <h3 id='query-parameters-16'>Query Parameters</h3>
@@ -2432,7 +2474,9 @@ Response</p>
   </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-21'>HTTP Request</h3>
+</span></code></pre>
+<p>Performing an intra-bank transfer. Same bank transfer</p>
+<h3 id='http-request-21'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/accounttransfers</code></p>
 <h3 id='query-parameters-18'>Query Parameters</h3>
 <table><thead>
@@ -2571,42 +2615,43 @@ Response</p>
 <p><code>GET https://api.woodcoreapp.com/v1/accounttransfers</code></p>
 <h1 id='standing-instruction'>Standing Instruction</h1><h2 id='create-standing-instruction'>Create standing instruction</h2>
 <blockquote>
-<p>Create standing instruction Request
-```json
-{
-  &quot;fromOfficeId&quot;:1,
-    &quot;fromClientId&quot;:1,
-    &quot;fromAccountType&quot;:2,
-    &quot;name&quot;:&quot;standing instruction&quot;,
-    &quot;transferType&quot;:1,
-    &quot;priority&quot;:2,
-    &quot;status&quot;:1,
-    &quot;fromAccountId&quot;:1,
-    &quot;toOfficeId&quot;:1,
-    &quot;toClientId&quot;:1,
-    &quot;toAccountType&quot;:2,
-    &quot;toAccountId&quot;:3,
-    &quot;instructionType&quot;:1,
-    &quot;amount&quot;:&quot;221&quot;,
-    &quot;validFrom&quot;:&quot;08 April 2014&quot;,
-    &quot;recurrenceType&quot;:1,
-    &quot;recurrenceInterval&quot;:&quot;1&quot;,
-    &quot;recurrenceFrequency&quot;:2,
-    &quot;locale&quot;:&quot;en&quot;,
-    &quot;dateFormat&quot;:&quot;dd MMMM yyyy&quot;,
-    &quot;recurrenceOnMonthDay&quot;:&quot;02 April&quot;,
-    &quot;monthDayFormat&quot;:&quot;dd MMMM&quot;
-}</p>
+<p>Create standing instruction Request</p>
 </blockquote>
-<pre class="highlight plaintext"><code>&gt; Response
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"fromOfficeId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fromClientId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fromAccountType"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"standing instruction"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transferType"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"priority"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"fromAccountId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"toOfficeId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"toClientId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"toAccountType"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"toAccountId"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"instructionType"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"amount"</span><span class="p">:</span><span class="s2">"221"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"validFrom"</span><span class="p">:</span><span class="s2">"08 April 2014"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recurrenceType"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recurrenceInterval"</span><span class="p">:</span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recurrenceFrequency"</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"locale"</span><span class="p">:</span><span class="s2">"en"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"dateFormat"</span><span class="p">:</span><span class="s2">"dd MMMM yyyy"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"recurrenceOnMonthDay"</span><span class="p">:</span><span class="s2">"02 April"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"monthDayFormat"</span><span class="p">:</span><span class="s2">"dd MMMM"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-```json
-{
-  "clientId":1,
-  "resourceId":65
-}
+</span></code></pre>
+<blockquote>
+<p>Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"clientId"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="mi">65</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-</code></pre>
+</span></code></pre>
 <p>Ability to create new instruction for transfer of monetary funds from one account to another periodically.</p>
 <h3 id='http-request-23'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/standinginstructions</code></p>
@@ -3049,20 +3094,117 @@ Response</p>
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+</span></code></pre>
+<p>Create or orginate a loan portfolio for a customer via API.</p>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO languange</td>
+</tr>
+<tr>
+<td>clientId</td>
+<td><span class="label notice">true</span></td>
+<td>customer&#39;s id</td>
+</tr>
+<tr>
+<td>productId</td>
+<td><span class="label notice">true</span></td>
+<td>loan product id</td>
+</tr>
+<tr>
+<td>principal</td>
+<td><span class="label notice">true</span></td>
+<td>loan principal</td>
+</tr>
+<tr>
+<td>loanTermFrequency</td>
+<td><span class="label notice">true</span></td>
+<td>repayment is 12 months</td>
+</tr>
+<tr>
+<td>loanTermFrequencyType:</td>
+<td><span class="label notice">true</span></td>
+<td>frequency type, yearly, annually and monthly</td>
+</tr>
+<tr>
+<td>loanType</td>
+<td><span class="label notice">true</span></td>
+<td>type of loan customer</td>
+</tr>
+<tr>
+<td>numberOfRepayments</td>
+<td><span class="label notice">true</span></td>
+<td>number of repayments to be paid.</td>
+</tr>
+<tr>
+<td>repaymentEvery</td>
+<td><span class="label notice">true</span></td>
+<td>repayment on every month, year or day</td>
+</tr>
+<tr>
+<td>repaymentFrequencyType</td>
+<td><span class="label notice">true</span></td>
+<td>repayment type</td>
+</tr>
+<tr>
+<td>interestRatePerPeriod</td>
+<td><span class="label notice">true</span></td>
+<td>interest period</td>
+</tr>
+<tr>
+<td>interestType</td>
+<td><span class="label notice">true</span></td>
+<td>interest type</td>
+</tr>
+<tr>
+<td>interestCalculationPeriodType</td>
+<td><span class="label notice">true</span></td>
+<td>interest calculation period</td>
+</tr>
+<tr>
+<td>transactionProcessingStrategyId</td>
+<td><span class="label notice">true</span></td>
+<td>repayment processing type</td>
+</tr>
+<tr>
+<td>expectedDisbursementDate</td>
+<td><span class="label notice">true</span></td>
+<td>disbursment date</td>
+</tr>
+<tr>
+<td>submittedOnDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of submittion</td>
+</tr>
+<tr>
+<td>linkAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>savings account to disburse the loan and collect repayments</td>
+</tr>
+<tr>
+<td>fixedEmiAmount</td>
+<td><span class="label notice">true</span></td>
+<td>fixed emi amount</td>
+</tr>
+<tr>
+<td>maxOutstandingLoanBalance</td>
+<td><span class="label notice">true</span></td>
+<td>maximum outstanding loan balance</td>
 </tr>
 </tbody></table>
 <h2 id='approve-loan-account'>Approve loan account</h2>
@@ -3075,8 +3217,16 @@ Response</p>
     </span><span class="s2">"approvedOnDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 September 2011"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"expectedDisbursementDate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"20 September 2011"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Loan approval note"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"disbursementData"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="err">id=</span><span class="mi">226</span><span class="p">,</span><span class="w"> </span><span class="err">principal=</span><span class="s2">"5"</span><span class="p">,</span><span class="w"> </span><span class="err">expectedDisbursementDate=</span><span class="s2">"20 September 2011"</span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w"> </span><span class="err">id=</span><span class="mi">227</span><span class="p">,</span><span class="w"> </span><span class="err">principal=</span><span class="s2">"91"</span><span class="p">,</span><span class="w"> </span><span class="err">expectedDisbursementDate=</span><span class="s2">"21 September 2011"</span><span class="p">}]</span><span class="w">
+    </span><span class="s2">"disbursementData"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w"> </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">226</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"principal"</span><span class="p">:</span><span class="s2">"5"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"expectedDisbursementDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20 September 2011"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">227</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"principal"</span><span class="p">:</span><span class="s2">"91"</span><span class="p">,</span><span class="w"> 
+        </span><span class="s2">"expectedDisbursementDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"21 September 2011"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -3107,20 +3257,42 @@ Response</p>
     </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Loan approval note"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+</span></code></pre>
+<p>A loan account needs to be approved after creation</p>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=approve</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO language</td>
+</tr>
+<tr>
+<td>expectedDisbursementDate</td>
+<td><span class="label notice">true</span></td>
+<td>expected disbursement date</td>
+</tr>
+<tr>
+<td>disbursementData</td>
+<td><span class="label notice">false</span></td>
+<td></td>
+</tr>
+<tr>
+<td>note</td>
+<td><span class="label notice">true</span></td>
+<td>description for disbursement</td>
 </tr>
 </tbody></table>
 <h2 id='assign-loan-officer'>Assign loan officer</h2>
@@ -3128,7 +3300,7 @@ Response</p>
 <p>Assign loan officer Request</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"unassignedDate"</span><span class="p">:</span><span class="s2">"15 September 2014"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"assignedDate"</span><span class="p">:</span><span class="s2">"15 September 2014"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"locale"</span><span class="p">:</span><span class="s2">"en"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"dateFormat"</span><span class="p">:</span><span class="s2">"dd MMMM yyyy"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -3143,20 +3315,32 @@ Response</p>
     </span><span class="s2">"loanId"</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="w">
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="mi">3</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=unassignLoanOfficer</code></p>
+</span></code></pre>
+<p>Allows you to assign Savings Officer for existing Savings Account.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=assignLoanOfficer</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>assignedDate</td>
+<td><span class="label notice">true</span></td>
+<td>assign a loan officer date</td>
+</tr>
+<tr>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO language</td>
 </tr>
 </tbody></table>
 <h1 id='loan-transactions'>Loan Transactions</h1><h2 id='disburse-loan'>Disburse Loan</h2>
@@ -3167,16 +3351,16 @@ Response</p>
   </span><span class="s2">"dateFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dd MMMM yyyy"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"locale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"en"</span><span class="p">,</span><span class="w">
   </span><span class="s2">"transactionAmount"</span><span class="p">:</span><span class="mi">10000</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fixedEmiAmount""1100,
-  "</span><span class="err">actualDisbursementDate</span><span class="s2">": "</span><span class="mi">14</span><span class="w"> </span><span class="err">May</span><span class="w"> </span><span class="mi">2013</span><span class="s2">",
-  "</span><span class="err">paymentTypeId</span><span class="s2">": "</span><span class="mi">12</span><span class="s2">",
-  "</span><span class="err">note</span><span class="s2">": "</span><span class="err">loan_disbursed</span><span class="s2">",
-  "</span><span class="err">accountNumber</span><span class="s2">": "</span><span class="err">accno</span><span class="mi">123</span><span class="s2">",
-  "</span><span class="err">checkNumber</span><span class="s2">": "</span><span class="err">chec</span><span class="mi">123</span><span class="s2">",
-  "</span><span class="err">routingCode</span><span class="s2">": "</span><span class="err">rou</span><span class="mi">123</span><span class="s2">",
-  "</span><span class="err">receiptNumber</span><span class="s2">": "</span><span class="err">rec</span><span class="mi">123</span><span class="s2">",
-  "</span><span class="err">bankNumber</span><span class="s2">": "</span><span class="err">ban</span><span class="mi">123</span><span class="s2">"
-}
+  </span><span class="s2">"fixedEmiAmount"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1100"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"actualDisbursementDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">"14 May 2013"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"paymentTypeId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"note"</span><span class="p">:</span><span class="w"> </span><span class="s2">"loan_disbursed"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"accountNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accno123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"checkNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"chec123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"routingCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rou123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"receiptNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rec123"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"bankNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ban123"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
 </span></code></pre>
 <blockquote>
@@ -3212,20 +3396,77 @@ Response</p>
     </span><span class="s2">"transactionAmount"</span><span class="p">:</span><span class="mi">10000</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+</span></code></pre>
+<p>Disburse the loan principal to any external account based of the choice of your customer.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=disburse</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO language</td>
+</tr>
+<tr>
+<td>transactionAmount</td>
+<td><span class="label notice">true</span></td>
+<td>disbursement amount</td>
+</tr>
+<tr>
+<td>fixedEmiAmount</td>
+<td><span class="label notice">false</span></td>
+<td>emi amount</td>
+</tr>
+<tr>
+<td>actualDisbursementDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of disbursement</td>
+</tr>
+<tr>
+<td>paymentTypeId</td>
+<td><span class="label notice">false</span></td>
+<td>payment type (NIP, Card, Transfer)</td>
+</tr>
+<tr>
+<td>note</td>
+<td><span class="label notice">true</span></td>
+<td>description of disbursement</td>
+</tr>
+<tr>
+<td>accountNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming account number</td>
+</tr>
+<tr>
+<td>checkNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming check number (could be any reference)</td>
+</tr>
+<tr>
+<td>routingCode</td>
+<td><span class="label notice">false</span></td>
+<td>incoming routing code</td>
+</tr>
+<tr>
+<td>receiptNumber</td>
+<td><span class="label notice">false</span></td>
+<td>transaction receipt number</td>
+</tr>
+<tr>
+<td>bankNumber</td>
+<td><span class="label notice">false</span></td>
+<td>origination bank number</td>
 </tr>
 </tbody></table>
 <h2 id='disburse-loan-to-savings-account'>Disburse Loan to Savings account</h2>
@@ -3270,20 +3511,47 @@ Response</p>
     </span><span class="s2">"transactionAmount"</span><span class="p">:</span><span class="mi">10000</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+</span></code></pre>
+<p>Disburse the loan amount directly into the customers savings deposit account on woodcore.</p>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=disburseToSavings</code></p>
 <h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO language</td>
+</tr>
+<tr>
+<td>transactionAmount</td>
+<td><span class="label notice">true</span></td>
+<td>disbursement amount</td>
+</tr>
+<tr>
+<td>fixedEmiAmount</td>
+<td><span class="label notice">false</span></td>
+<td>emi amount</td>
+</tr>
+<tr>
+<td>actualDisbursementDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of disbursement</td>
+</tr>
+<tr>
+<td>note</td>
+<td><span class="label notice">true</span></td>
+<td>description of disbursement</td>
 </tr>
 </tbody></table>
 <h2 id='reverse-loan-disbursal'>Reverse Loan Disbursal</h2>
@@ -3320,7 +3588,9 @@ Response</p>
     </span><span class="s2">"actualDisbursementDate"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+</span></code></pre>
+<p>Undo or reverse disbursal - Do not undo if you did not disburse to the customer&#39;s savings, unless you can reverse the transaction from an external source</p>
+<h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}?command=undoDisbursal</code></p>
 <h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
@@ -3331,9 +3601,9 @@ Response</p>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>note</td>
+<td><span class="label notice">true</span></td>
+<td>description of disbursement reversal</td>
 </tr>
 </tbody></table>
 <h2 id='make-a-repayment'>Make a Repayment</h2>
@@ -3376,20 +3646,72 @@ Response</p>
     </span><span class="s2">"bankNumber"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ban123"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+</span></code></pre>
+<p>Perform a repayment in a loan account. Usually, woodcore has a background job that performs payments on your behalf. woodcore debit teh customer savings account and credit the loan account at the agreed date, hence, if the savings account does not have funds, nothing happens</p>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}/transactions?command=repayment</code></p>
 <h3 id='query-parameters-7'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>language</td>
+</tr>
+<tr>
+<td>transactionDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of transaction</td>
+</tr>
+<tr>
+<td>transactionAmount</td>
+<td><span class="label notice">true</span></td>
+<td>transaction amount</td>
+</tr>
+<tr>
+<td>paymentTypeId</td>
+<td><span class="label notice">false</span></td>
+<td>type of payment by id (NIP incoming, card incoming, etc). they must be created fisrt</td>
+</tr>
+<tr>
+<td>accountNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming account number</td>
+</tr>
+<tr>
+<td>checkNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming check number (could be any reference)</td>
+</tr>
+<tr>
+<td>routingCode</td>
+<td><span class="label notice">false</span></td>
+<td>incoming routing code</td>
+</tr>
+<tr>
+<td>receiptNumber</td>
+<td><span class="label notice">false</span></td>
+<td>transaction receipt number</td>
+</tr>
+<tr>
+<td>bankNumber</td>
+<td><span class="label notice">false</span></td>
+<td>origination bank number</td>
+</tr>
+<tr>
+<td>notes</td>
+<td><span class="label notice">false</span></td>
+<td>transaction narration</td>
 </tr>
 </tbody></table>
 <h2 id='waive-loan-interest'>Waive Loan Interest</h2>
@@ -3423,20 +3745,42 @@ Response</p>
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+</span></code></pre>
+<p>Waive some portion of the interest associated to a loan</p>
+<h3 id='http-request-8'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}/transactions?command=waiveInterest</code></p>
 <h3 id='query-parameters-8'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>language</td>
+</tr>
+<tr>
+<td>transactionDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of transaction</td>
+</tr>
+<tr>
+<td>transactionAmount</td>
+<td><span class="label notice">true</span></td>
+<td>transaction amount</td>
+</tr>
+<tr>
+<td>notes</td>
+<td><span class="label notice">false</span></td>
+<td>reason for waving</td>
 </tr>
 </tbody></table>
 <h2 id='retrieve-a-transaction-details'>Retrieve a Transaction Details</h2>
@@ -3478,20 +3822,6 @@ Response</p>
 
 </span></code></pre><h3 id='http-request-9'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/loans/{loanId}/transactions/{transactionId}</code></p>
-<h3 id='query-parameters-9'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
-</tr>
-</tbody></table>
 <h1 id='general-ledgers'>General Ledgers</h1><h2 id='create-a-ledger'>Create a Ledger</h2>
 <blockquote>
 <p>Create a ledger Request</p>
@@ -3514,20 +3844,57 @@ Response</p>
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+</span></code></pre>
+<p><strong>Note:</strong> You may optionally create Hierarchical Chart of Accounts by using the <code>parentId</code> property of an Account</p>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/glaccounts</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
+<td>name</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>glcode</td>
+<td><span class="label notice">true</span></td>
+<td>language</td>
+</tr>
+<tr>
+<td>manualEntriesAllowed</td>
+<td><span class="label notice">true</span></td>
+<td>manual entry allow to this account</td>
+</tr>
+<tr>
+<td>type</td>
+<td><span class="label notice">true</span></td>
+<td>Asset, liability, Income, Expense, Equity</td>
+</tr>
+<tr>
+<td>tagId</td>
+<td><span class="label notice">true</span></td>
+<td>tag id for accountng rule</td>
+</tr>
+<tr>
+<td>parentId</td>
+<td><span class="label notice">true</span></td>
+<td>if this is a child account, add the header account id</td>
+</tr>
+<tr>
+<td>usage</td>
+<td><span class="label notice">true</span></td>
+<td>header account 1</td>
+</tr>
+<tr>
 <td>description</td>
+<td><span class="label notice">true</span></td>
+<td>desciptive use of this gl account</td>
 </tr>
 </tbody></table>
 <h2 id='update-a-ledger'>Update a Ledger</h2>
@@ -3547,20 +3914,22 @@ Response</p>
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cash at Bangalore rural"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+</span></code></pre>
+<p>Update a ledger wth any parameter you previosuly craeted </p>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>PUT https://api.woodcoreapp.com/v1/glaccounts/{glaccountId}</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
 <td>description</td>
+<td><span class="label notice">true</span></td>
+<td>descriptive use of this gl account</td>
 </tr>
 </tbody></table>
 <h2 id='delete-a-ledger'>Delete a Ledger</h2>
@@ -3579,14 +3948,14 @@ Response</p>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>glaccountId</td>
+<td><span class="label notice">true</span></td>
+<td>gl_id</td>
 </tr>
 </tbody></table>
 <h2 id='account-closure'>Account Closure</h2>
@@ -3647,22 +4016,10 @@ Response</p>
         </span><span class="s2">"comments"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello"</span><span class="p">,</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+</span></code></pre>
+<p>An accounting closure indicates that no more journal entries may be logged (or reversed) in the system, either manually or via the portfolio with an entry date prior to the defined closure date</p>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>GET https://api.woodcoreapp.com/v1/glclosures/</code></p>
-<h3 id='query-parameters-4'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
-</tr>
-</tbody></table>
 <h2 id='create-a-account-closure'>Create a account closure</h2>
 <blockquote>
 <p>Create an account closure Request</p>
@@ -3683,20 +4040,42 @@ Response</p>
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+</span></code></pre>
+<p>Creating end of business closure</p>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/glclosures</code></p>
-<h3 id='query-parameters-5'>Query Parameters</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>closingDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of closure</td>
+</tr>
+<tr>
+<td>comments</td>
+<td><span class="label notice">false</span></td>
+<td>reason for closure</td>
+</tr>
+<tr>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>ISO language</td>
+</tr>
+<tr>
+<td>officeId</td>
+<td><span class="label notice">true</span></td>
+<td>office or branch id</td>
 </tr>
 </tbody></table>
 <h1 id='journal-entries'>Journal Entries</h1><h2 id='create-journal-entries'>Create journal entries</h2>
@@ -3736,6 +4115,7 @@ Response</p>
    </span><span class="s2">"routingCode"</span><span class="p">:</span><span class="s2">"rou123"</span><span class="p">,</span><span class="w">
    </span><span class="s2">"receiptNumber"</span><span class="p">:</span><span class="s2">"rec123"</span><span class="p">,</span><span class="w">
    </span><span class="s2">"bankNumber"</span><span class="p">:</span><span class="s2">"ban123"</span><span class="w">
+
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -3746,20 +4126,78 @@ Response</p>
     </span><span class="s2">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DNEEMS2LPD0NJ9O"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-6'>HTTP Request</h3>
+</span></code></pre>
+<p><strong>Note:</strong> A Balanced (simple) Journal entry would have atleast one &quot;Debit&quot; and one &quot;Credit&quot; entry whose amounts are equal
+Compound Journal entries may have &quot;n&quot; debits and &quot;m&quot; credits where both &quot;m&quot; and &quot;n&quot; are greater than 0 and the net sum or all debits and credits are equal</p>
+<h3 id='http-request-6'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/journalentries</code></p>
-<h3 id='query-parameters-6'>Query Parameters</h3>
+<h3 id='query-parameters-5'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>dateFormat</td>
+<td><span class="label notice">true</span></td>
+<td>standard date format</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>language</td>
+</tr>
+<tr>
+<td>transactionDate</td>
+<td><span class="label notice">true</span></td>
+<td>date of transaction</td>
+</tr>
+<tr>
+<td>credits</td>
+<td><span class="label notice">true</span></td>
+<td>list of a gl accounts to be credited</td>
+</tr>
+<tr>
+<td>debits</td>
+<td><span class="label notice">true</span></td>
+<td>list of a gl accounts to be dedited</td>
+</tr>
+<tr>
+<td>paymentTypeId</td>
+<td><span class="label notice">false</span></td>
+<td>type of payment by id (NIP incoming, card incoming, etc). they must be created fisrt</td>
+</tr>
+<tr>
+<td>accountNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming account number</td>
+</tr>
+<tr>
+<td>checkNumber</td>
+<td><span class="label notice">false</span></td>
+<td>incoming check number (could be any reference)</td>
+</tr>
+<tr>
+<td>routingCode</td>
+<td><span class="label notice">false</span></td>
+<td>incoming routing code</td>
+</tr>
+<tr>
+<td>receiptNumber</td>
+<td><span class="label notice">false</span></td>
+<td>transaction receipt number</td>
+</tr>
+<tr>
+<td>bankNumber</td>
+<td><span class="label notice">false</span></td>
+<td>origination bank number</td>
+</tr>
+<tr>
+<td>comments</td>
+<td><span class="label notice">false</span></td>
+<td>transaction narration</td>
 </tr>
 </tbody></table>
 <h2 id='retrieve-journal-entries'>Retrieve journal entries</h2>
@@ -3801,22 +4239,10 @@ Response</p>
     </span><span class="s2">"reversed"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-7'>HTTP Request</h3>
+</span></code></pre>
+<p>Retrive all journal entries</p>
+<h3 id='http-request-7'>HTTP Request</h3>
 <p><code>GET https://api.woodcoreapp.com/v1/journalentries</code></p>
-<h3 id='query-parameters-7'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
-</tr>
-</tbody></table>
 <h2 id='reverse-journal-entries'>Reverse journal entries</h2>
 <blockquote>
 <p>Response</p>
@@ -3824,20 +4250,22 @@ Response</p>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"transactionId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"YFDYMPBVVI9TRJP"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+</span></code></pre>
+<p>Reverse a journal entry already made.</p>
+<h3 id='http-request-8'>HTTP Request</h3>
 <p><code>GET https://api.woodcoreapp.com/v1/journalentries/{transactionId}?command=reverse</code></p>
-<h3 id='query-parameters-8'>Query Parameters</h3>
+<h3 id='query-parameters-6'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>transactionId</td>
+<td><span class="label notice">false</span></td>
+<td>transaction id</td>
 </tr>
 </tbody></table>
 <h1 id='banking-products'>Banking Products</h1><h2 id='deposit-product'>Deposit Product</h2><h3 id='create-deposit-product'>Create Deposit Product</h3>
@@ -3901,20 +4329,162 @@ Response</p>
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+</span></code></pre>
+<p>With a single API call you cna create a banking product. Create a Deposit/Savings/Fixed/Current banking product with the parameters above. Take not of the arguments below.</p>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsproducts</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
+<td>name</td>
+<td><span class="label notice">true</span></td>
+<td>product name e.g: Stash Deposit</td>
+</tr>
+<tr>
+<td>shortName</td>
+<td><span class="label notice">true</span></td>
+<td>an abbrevation of the name e.g SD</td>
+</tr>
+<tr>
 <td>description</td>
+<td><span class="label notice">true</span></td>
+<td>description of this deposit product</td>
+</tr>
+<tr>
+<td>currencyCode</td>
+<td><span class="label notice">true</span></td>
+<td>currency</td>
+</tr>
+<tr>
+<td>digitsAfterDecimal</td>
+<td><span class="label notice">true</span></td>
+<td>number of decimal for amount. 10</td>
+</tr>
+<tr>
+<td>inMultiplesOf</td>
+<td><span class="label notice">true</span></td>
+<td>digits should be a multiple of 2</td>
+</tr>
+<tr>
+<td>nominalAnnualInterestRate</td>
+<td><span class="label notice">true</span></td>
+<td>account interest rate (any customer that subscribes to this product will be paid interest)</td>
+</tr>
+<tr>
+<td>interestCompoundingPeriodType</td>
+<td><span class="label notice">true</span></td>
+<td>days, week, months, year</td>
+</tr>
+<tr>
+<td>interestPostingPeriodType</td>
+<td><span class="label notice">true</span></td>
+<td>monthly, quaterly, annually</td>
+</tr>
+<tr>
+<td>interestCalculationType</td>
+<td><span class="label notice">true</span></td>
+<td>average daily balance or current balance</td>
+</tr>
+<tr>
+<td>interestCalculationDaysInYearType</td>
+<td><span class="label notice">true</span></td>
+<td>actuall days in a year</td>
+</tr>
+<tr>
+<td>minRequiredOpeningBalance</td>
+<td><span class="label notice">false</span></td>
+<td>minimum opening balance</td>
+</tr>
+<tr>
+<td>allowOverdraft</td>
+<td><span class="label notice">false</span></td>
+<td>allow overdrafts</td>
+</tr>
+<tr>
+<td>overdraftLimit</td>
+<td><span class="label notice">false</span></td>
+<td>overdraft limit if allowed</td>
+</tr>
+<tr>
+<td>minBalanceForInterestCalculation</td>
+<td><span class="label notice">true</span></td>
+<td>minmum balance for interset calculation</td>
+</tr>
+<tr>
+<td>minRequiredBalance</td>
+<td><span class="label notice">false</span></td>
+<td>minimum balance that must be in a customer&#39;s account</td>
+</tr>
+<tr>
+<td>enforceMinRequiredBalance</td>
+<td><span class="label notice">true</span></td>
+<td>enforce minimum balance on customers account</td>
+</tr>
+<tr>
+<td>lockinPeriodFrequency</td>
+<td><span class="label notice">false</span></td>
+<td>lock savings</td>
+</tr>
+<tr>
+<td>lockinPeriodFrequencyType</td>
+<td><span class="label notice">false</span></td>
+<td></td>
+</tr>
+<tr>
+<td>withdrawalFeeForTransfers</td>
+<td><span class="label notice">false</span></td>
+<td>apply fee for all withdrawal</td>
+</tr>
+<tr>
+<td>accountingRule</td>
+<td><span class="label notice">false</span></td>
+<td></td>
+</tr>
+<tr>
+<td>charges</td>
+<td><span class="label notice">false</span></td>
+<td>charges applied to this product</td>
+</tr>
+<tr>
+<td>savingsReferenceAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>An Asset account (typically a Cash account), to which the amount is debited when a deposit is made by the account holder and credit when the account holder makes a withdrawal</td>
+</tr>
+<tr>
+<td>transfersInSuspenseAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>An Asset account that is used a suspense account for tracking Portfolio of Loans under transfer</td>
+</tr>
+<tr>
+<td>savingsControlAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>A Liability account which denotes the Savings deposit accounts portfolio and is credited when a deposit is made and debited when a withdrawal is done</td>
+</tr>
+<tr>
+<td>interestOnSavingsAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>An Expense account, which is debited when interest is due to be paid to the customer</td>
+</tr>
+<tr>
+<td>incomeFromFeeAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>An Income account which is credited when a fee is paid by account holder on this account</td>
+</tr>
+<tr>
+<td>incomeFromPenaltyAccountId</td>
+<td><span class="label notice">true</span></td>
+<td>An Income account, which is credited when a penalty is paid by account holder on this account</td>
+</tr>
+<tr>
+<td>locale</td>
+<td><span class="label notice">true</span></td>
+<td>language</td>
 </tr>
 </tbody></table>
 <h3 id='retrieve-deposit-product'>Retrieve Deposit Product</h3>
@@ -4040,22 +4610,10 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 
-</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST https://api.woodcoreapp.com/v1/savingsproducts</code></p>
-<h3 id='query-parameters-2'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
-</tr>
-</tbody></table>
+</span></code></pre>
+<p>Retrieve all the depsoit/savings products in your woodcore account</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET https://api.woodcoreapp.com/v1/savingsproducts</code></p>
 <h3 id='delete-deposit-product'>Delete Deposit Product</h3>
 <blockquote>
 <p>Response</p>
@@ -4065,19 +4623,19 @@ Response</p>
 </span><span class="p">}</span><span class="w">
 
 </span></code></pre><h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://api.woodcoreapp.com/v1/savingsproducts/{productId}</code></p>
-<h3 id='query-parameters-3'>Query Parameters</h3>
+<p><code>DELETE https://api.woodcoreapp.com/v1/savingsproducts/{productId}</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
+<td>productId</td>
+<td><span class="label notice">true</span></td>
+<td>product_id</td>
 </tr>
 </tbody></table>
 <h2 id='loan-product'>Loan Product</h2><h3 id='create-loan-product'>Create Loan Product</h3>
@@ -4172,22 +4730,16 @@ Response</p>
     </span><span class="s2">"resourceId"</span><span class="p">:</span><span class="w"> </span><span class="mi">22</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+</span></code></pre>
+<p>Creating a loan product</p>
+<h3 id='http-request-4'>HTTP Request</h3>
 <p><code>POST https://api.woodcoreapp.com/v1/savingsproducts</code></p>
-<h3 id='query-parameters-4'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>params</td>
-<td>true</td>
-<td>description</td>
-</tr>
-</tbody></table>
+
+<!-- ### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+params | true | description -->
 
     </div>
     <div class="dark-box">
